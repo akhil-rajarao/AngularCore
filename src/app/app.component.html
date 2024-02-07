@@ -1,25 +1,27 @@
-<h1>Current Time {{ timer }}</h1>
-<h1 style="margin-top: 20px; color: brown">DIRECTIVES</h1>
+<p>Current Time {{ timer }}</p>
+<p style="margin-top: 20px; color: brown">DIRECTIVES</p>
 <h3>Structural Directives</h3>
 <h4 *ngIf="visible">*ngIf</h4>
 <button on-click="changeVisibility()">change visibility</button><br />
 <input type="text" /> <button [disabled]="buttonhide">Search</button><br />
 <input type="text" [(ngModel)]="city" on-input="inputchangeFUnction($event)" />
-<h1>{{ city }}</h1>
+<p>{{ city }}</p>
 <p>[(ngModel)]="city"</p>
 <button (click)="changecity()">Change City</button>
-<h1 [class]="isactive ? 'active' : 'inactive'">
+<p [class]="isactive ? 'active' : 'inactive'">
   Class binding : [class]="isactive ? 'active' : 'inactive'"
-</h1>
-<h1 style="color: rgb(36, 44, 29)">
+</p>
+<p style="color: rgb(36, 44, 29)">
   Style binding : style="color: rgb(36, 44, 29)"
-</h1>
-<h1 [style.color]="grass ? 'green' : 'blue'">
+</p>
+<p [style.color]="grass ? 'green' : 'blue'">
   Property Binding : [style.color]="grass? 'green':'blue'"
-</h1>
+</p>
 <button (click)="increment()">+</button>
 <button (click)="decrement()">-</button>
 <h2>Counter:{{ counter }}</h2>
 Name = <input type="text" on-input="onchangeFunction($event)" />
 <h3>{{ name }}</h3>
+<p *ngFor="let m of movies">{{ m }}</p>
+
 <img style="width: 10vw" src="{{ path }}" alt="imagesinsindekjn" />
