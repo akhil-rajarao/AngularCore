@@ -1,10 +1,13 @@
 <h1>Current Time {{ timer }}</h1>
-
-<input type="text" /> <button [disabled]="buttonhide">Search</button><br>
-<input type="text" [(ngModel)]="city" on-input = "inputchangeFUnction($event)">
-<h1>{{city}}</h1>
-<button (click)="changecity()">Change City
-</button>
+<h1 style="margin-top: 20px; color: brown">DIRECTIVES</h1>
+<h3>Structural Directives</h3>
+<h4 *ngIf="visible">*ngIf</h4>
+<button on-click="changeVisibility()">change visibility</button><br />
+<input type="text" /> <button [disabled]="buttonhide">Search</button><br />
+<input type="text" [(ngModel)]="city" on-input="inputchangeFUnction($event)" />
+<h1>{{ city }}</h1>
+<p>[(ngModel)]="city"</p>
+<button (click)="changecity()">Change City</button>
 <h1 [class]="isactive ? 'active' : 'inactive'">
   Class binding : [class]="isactive ? 'active' : 'inactive'"
 </h1>

@@ -14,6 +14,7 @@ export class AppComponent {
   isactive: boolean = true;
   path: string = '../assets/img2.jpg';
   grass:boolean = false
+  visible: boolean = false
   counter :number = 0
   city: string = "Hyderabad"
   name:any = "(input)=changeName($event)"
@@ -33,7 +34,11 @@ inputchangeFUnction = (e:any)=>{
 }
 
 changecity = ()=>{
-  this.city = this.city == "Bangalore" ? "Hyderabad" : "Bangalore"
+  this.city = this.city == "Bangalore"  ? "Hyderabad" : "Bangalore"
+}
+
+changeVisibility =  ()=>{
+  this.visible = !this.visible
 }
 
 }
