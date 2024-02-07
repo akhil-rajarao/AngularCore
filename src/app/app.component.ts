@@ -16,6 +16,7 @@ export class AppComponent {
   visible: boolean = false;
   counter: number = 0;
   city: string = 'Hyderabad';
+  valuesinsode:string = "value1"
   isloading: boolean = false;
   movies = ['marvel', 'ironman', 'doctor Strange'];
   name: any = '(input)=changeName($event)';

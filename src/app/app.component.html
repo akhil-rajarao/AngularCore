@@ -23,8 +23,16 @@
 Name = <input type="text" on-input="onchangeFunction($event)" />
 <h3>{{ name }}</h3>
 <p *ngFor="let m of movies">{{ m }}</p>
-<h1 *ngIf="!isloading;   then safe  else current">Loading...</h1>
+<h1 *ngIf="!isloading; then safe; else current">Loading...</h1>
 <ng-template #current> <h1>AKHIL</h1> </ng-template><br />
 <ng-template #safe>akhil true</ng-template>
+<table style="border: 5px solid red;"><tr><td *ngFor="let x of movies index as i">{{x}} {{i}}</td></tr></table>
+<!-- Your component template -->
+<p [ngSwitch]="valuesinsode">
+  <ng-container *ngSwitchCase="'value1'"><h1>Content for value1</h1></ng-container>
+  <ng-container *ngSwitchCase="'value2'">Content for value2</ng-container>
+  <ng-container *ngSwitchCase="'value3'">Content for value3</ng-container>
+  <ng-container *ngSwitchDefault>Default content</ng-container>
+</p>
 
 <img style="width: 10vw" src="{{ path }}" alt="imagesinsindekjn" />
