@@ -23,5 +23,8 @@
 Name = <input type="text" on-input="onchangeFunction($event)" />
 <h3>{{ name }}</h3>
 <p *ngFor="let m of movies">{{ m }}</p>
+<h1 *ngIf="!isloading;   then safe  else current">Loading...</h1>
+<ng-template #current> <h1>AKHIL</h1> </ng-template><br />
+<ng-template #safe>akhil true</ng-template>
 
 <img style="width: 10vw" src="{{ path }}" alt="imagesinsindekjn" />
