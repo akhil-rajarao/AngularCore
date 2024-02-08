@@ -22,6 +22,7 @@ export class AppComponent {
   movies = ['marvel', 'ironman', 'doctor Strange'];
   name: any = '(input)=changeName($event)';
   person: object={firstName:"John", gender:"m"};
+  wish :string = "good morning"
   increment = () => {
     this.counter = this.counter + 1;
   };

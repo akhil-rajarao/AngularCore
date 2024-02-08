@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustomPipePipe implements PipeTransform {
 
-  transform(value: any, ...args: unknown[]): string {
-    return `Hello Mr.${value.firstName}`;
+  transform(value: any, a:string): string {
+    return `Hello Mr.${value.firstName} ${a}`;
   }
 
 }
