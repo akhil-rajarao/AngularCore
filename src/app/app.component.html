@@ -1,42 +1,64 @@
-<p>Current Time {{ timer }}</p>
-<p style="margin-top: 20px; color: brown">DIRECTIVES</p>
-<h3>Structural Directives</h3>
-<h4 *ngIf="visible">*ngIf</h4>
-<button on-click="changeVisibility()">change visibility</button><br />
-<input type="text" /> <button [disabled]="buttonhide">Search</button><br />
-<input type="text" [(ngModel)]="city" on-input="inputchangeFUnction($event)" />
-<p>{{ city }}</p>
-<p>[(ngModel)]="city"</p>
-<button (click)="changecity()">Change City</button>
-<p [class]="isactive ? 'active' : 'inactive'">
-  Class binding : [class]="isactive ? 'active' : 'inactive'"
-</p>
-<p style="color: rgb(36, 44, 29)">
-  Style binding : style="color: rgb(36, 44, 29)"
-</p>
-<p [style.color]="grass ? 'green' : 'blue'">
-  Property Binding : [style.color]="grass? 'green':'blue'"
-</p>
-<button (click)="increment()">+</button>
-<button (click)="decrement()">-</button>
-<h2>Counter:{{ counter }}</h2>
-Name = <input type="text" on-input="onchangeFunction($event)" />
-<h3>{{ name }}</h3>
-<p *ngFor="let m of movies">{{ m }}</p>
-<h1 *ngIf="!isloading; then safe; else current">Loading...</h1>
-<ng-template #current> <h1>AKHIL</h1> </ng-template><br />
-<ng-template #safe>akhil true</ng-template>
-<table style="border: 5px solid red;"><tr><td *ngFor="let x of movies index as i">{{x}} {{i}}</td></tr></table>
-<!-- Your component template -->
-<p [ngSwitch]="valuesinsode">
-  <ng-container *ngSwitchCase="'value1'"><h1>Content for value1</h1></ng-container>
-  <ng-container *ngSwitchCase="'value2'">Content for value2</ng-container>
-  <ng-container *ngSwitchCase="'value3'">Content for value3</ng-container>
-  <ng-container *ngSwitchDefault>Default content</ng-container>
-</p>
- <h1>{{city | titlecase}}</h1>
- <h1>{{salary | currency :"INR"}}</h1>
- <h1>{{person | customPipe : wish}}</h1>
- <app-header [childTitle]="wish"></app-header>
+<div
+  style="
+    border: 5px solid blue;
+    padding: 10px;
+    text-align: center;
+    box-sizing: content-box;
+  "
+>
+  <!-- <p>Current Time {{ timer }}</p>
+  <p style="margin-top: 20px; color: brown">DIRECTIVES</p>
+  <h3>Structural Directives</h3>
+  <h4 *ngIf="visible">*ngIf</h4>
+  <button on-click="changeVisibility()">change visibility</button><br />
+  <input type="text" /> <button [disabled]="buttonhide">Search</button><br />
+  <input
+    type="text"
+    [(ngModel)]="city"
+    on-input="inputchangeFUnction($event)"
+  />
+  <p>{{ city }}</p>
+  <p>[(ngModel)]="city"</p>
+  <button (click)="changecity()">Change City</button>
+  <p [class]="isactive ? 'active' : 'inactive'">
+    Class binding : [class]="isactive ? 'active' : 'inactive'"
+  </p>
+  <p style="color: rgb(36, 44, 29)">
+    Style binding : style="color: rgb(36, 44, 29)"
+  </p>
+  <p [style.color]="grass ? 'green' : 'blue'">
+    Property Binding : [style.color]="grass? 'green':'blue'"
+  </p>
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+  <h2>Counter:{{ counter }}</h2>
+  Name = <input type="text" on-input="onchangeFunction($event)" />
+  <h3>{{ name }}</h3>
+  <p *ngFor="let m of movies">{{ m }}</p>
+  <h1 *ngIf="!isloading; then safe; else current">Loading...</h1>
+  <ng-template #current> <h1>AKHIL</h1> </ng-template><br />
+  <ng-template #safe>akhil true</ng-template>
+  <div>
+    <table style="border: 5px solid red">
+      <tr>
+        <td *ngFor="let x of movies; index as i">{{ x }} {{ i }}</td>
+      </tr>
+    </table>
+  </div>
 
-<img style="width: 10vw" src="{{ path }}" alt="imagesinsindekjn" />
+  <p [ngSwitch]="valuesinsode">
+    <ng-container *ngSwitchCase="'value1'"
+      ><h1>Content for value1</h1></ng-container
+    >
+    <ng-container *ngSwitchCase="'value2'">Content for value2</ng-container>
+    <ng-container *ngSwitchCase="'value3'">Content for value3</ng-container>
+    <ng-container *ngSwitchDefault>Default content</ng-container>
+  </p>
+  <h1>{{ city | titlecase }}</h1>
+  <h1>{{ salary | currency : "INR" }}</h1>
+  <h1>{{ person | customPipe : wish }}</h1>
+
+
+  <img style="width: 10vw" src="{{ path }}" alt="imagesinsindekjn" /> -->
+  <app-header [childTitle]="wish"></app-header>
+</div>
