@@ -24,6 +24,7 @@ export class AppComponent {
   name: any = '(input)=changeName($event)';
   person: object = { firstName: 'John', gender: 'm' };
   wish: string = 'buon mezzogiorno';
+  pulledData = ""
   increment = () => {
     this.counter = this.counter + 1;
   };
