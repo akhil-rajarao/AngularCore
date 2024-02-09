@@ -16,13 +16,14 @@ export class AppComponent {
   visible: boolean = false;
   counter: number = 0;
   city: string = 'Hyderabad';
-  salary:number = 8646846
-  valuesinsode:string = "value1"
+  salary: number = 8646846;
+  valuesinsode: string = 'value1';
   isloading: boolean = false;
+  cdata:any;
   movies = ['marvel', 'ironman', 'doctor Strange'];
   name: any = '(input)=changeName($event)';
-  person: object={firstName:"John", gender:"m"};
-  wish :string = "buon mezzogiorno"
+  person: object = { firstName: 'John', gender: 'm' };
+  wish: string = 'buon mezzogiorno';
   increment = () => {
     this.counter = this.counter + 1;
   };

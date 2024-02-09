@@ -4,6 +4,7 @@
     padding: 10px;
     text-align: center;
     box-sizing: content-box;
+    background-color: rgb(175, 157, 157);
   "
 >
   <!-- <p>Current Time {{ timer }}</p>
@@ -60,5 +61,9 @@
 
 
   <img style="width: 10vw" src="{{ path }}" alt="imagesinsindekjn" /> -->
-  <app-header [childTitle]="wish"></app-header>
+  <app-header [childTitle]="wish" (customEvent)="cdata = $event"></app-header>
+  <div>{{ cdata }}</div>
+  <br />
+  <input type="text" />
+
 </div>
