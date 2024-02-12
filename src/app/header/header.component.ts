@@ -9,11 +9,12 @@ import { emit } from 'process';
 export class HeaderComponent {
   @Input() place: any;
   area = 'chittoor';
+  places:any = "rayalaseema"
   changevillagename = (e: any) => {
     this.area = e.target.value;
   };
   buttonclick = () => {
-    this.area = 'penumuru';
+    return this.area = 'penumuru';
   };
   @Input() childTitle: any;
 
