@@ -1,5 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { NgModule, Component } from '@angular/core';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,22 +11,49 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule, NgIf } from '@angular/common';
 import { CustomPipePipe } from './custom-pipe.pipe';
 import { DecoratorsComponent } from './decorators/decorators.component';
-
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RouterModule, Routes } from '@angular/router';
+const customRoutes: Routes = [
+  {
+    path: '',
+    component: HeaderComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
+  },
+  {
+    path: 'footer',
+    component: FooterComponent,
+  },{
+    path: '**',
+    component: DecoratorsComponent,
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CustomPipePipe,
-    DecoratorsComponent
+    DecoratorsComponent,
+    FooterComponent,
+    AboutComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,CommonModule
+    FormsModule,
+    CommonModule,
+    RouterModule.forRoot(customRoutes),
   ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

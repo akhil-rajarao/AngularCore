@@ -67,6 +67,14 @@
 
   <app-decorators (decoratoremitter)="pulledData = $event"></app-decorators>
   <div>{{ pulledData }}</div> -->
-  <app-decorators></app-decorators>
-
+  <!-- <app-decorators></app-decorators> -->
+  <div style="display: flex; gap: 20px; justify-content: center">
+    <p routerLink="/" style="border: 2px solid black; padding: 4px; cursor: pointer">Header</p>
+    <p routerLink="/about" style="border: 2px solid black; padding: 4px; cursor: pointer">About</p>
+    <p routerLink="/contact-us" style="border: 2px solid black; padding: 4px; cursor: pointer">
+      contact us
+    </p>
+    <p routerLink="/footer" style="border: 2px solid black; padding: 4px; cursor: pointer">footer</p>
+  </div>
+  <div><router-outlet></router-outlet></div>
 </div>
