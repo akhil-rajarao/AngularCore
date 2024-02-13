@@ -16,7 +16,7 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class DecoratorsComponent {
   ngAfterViewInit() {
-    console.log(this.childvalue.nativeElement);
+    // console.log(this.childvalue.nativeElement);
     console.log(this.cd._results)
   }
   @ViewChild(HeaderComponent) child: any;

@@ -33,7 +33,14 @@ const customRoutes: Routes = [
   {
     path: 'footer',
     component: FooterComponent,
-  },{
+  },
+
+{
+    path: 'about/:id',
+    component: AboutComponent,
+  }
+
+  ,{
     path: '**',
     component: DecoratorsComponent,
   }
