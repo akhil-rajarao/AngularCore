@@ -1,8 +1,13 @@
-.inactive{
-    color: red;
-    background-color: black;
+.inactive {
+  color: red;
+  background-color: black;
 }
-.active{
-    color: green;
-    background-color: black;
+.active {
+  color: green;
+  background-color: black;
 }
+.activeclass {
+  color: white;
+  background: black;
+}
+
