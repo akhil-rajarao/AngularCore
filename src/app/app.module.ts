@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RouterModule, Routes } from '@angular/router';
+import { TestServiceService } from './test-service.service';
+
 const customRoutes: Routes = [
   {
     path: '',
@@ -53,7 +55,7 @@ const customRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(customRoutes),
   ],
-  providers: [provideClientHydration()],
+  providers: [provideClientHydration(),TestServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
