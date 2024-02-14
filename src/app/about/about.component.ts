@@ -8,11 +8,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './about.component.css',
 })
 export class AboutComponent implements OnInit {
-  queryName: any = 'nvrerverve';
+  queryName:any;
   constructor(
     private route: ActivatedRoute,
     private newts: TestServiceService
-  ) {}
+  ) {
+
+
+    this.route.queryParamMap.subscribe((query)=>{
+      let names = query.get("name")
+      if (names) {
+        alert(names)
+      }
+    })
+  }
+
+
   uservalue: any;
   usernames: any;
 
@@ -30,6 +41,7 @@ export class AboutComponent implements OnInit {
       this.uservalue = userId;
       this.usernames = this.newts.userDetails.find((e) => e.id == userId);
     });
+
   }
   newMobiles = this.newts.mobileName;
 }
