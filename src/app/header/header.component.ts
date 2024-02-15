@@ -1,5 +1,6 @@
 import { TestServiceService } from './../test-service.service';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 import { emit } from 'process';
 
 @Component({
@@ -8,7 +9,12 @@ import { emit } from 'process';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  constructor(public ts: TestServiceService) {}
+  constructor(private r:Router, public ts: TestServiceService) {
+
+  }
+ showChild = ()=>{
+      this.r.navigate(['home/homechild1'])
+    }
   mobiles = this.ts.mobileName;
   changeName = () => {
     this.ts.mobileName = 'Upgraded to Apple';

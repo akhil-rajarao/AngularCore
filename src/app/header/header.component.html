@@ -1,5 +1,8 @@
 <h1>This is Header Component</h1>
-<h1>{{ts.mobileName}}</h1><button on-click="changeName()">change</button>
+<h1>{{ ts.mobileName }}</h1>
+<button on-click="changeName()">change</button>
+<router-outlet></router-outlet>
+<button (click)="showChild()">show child component</button>
 
 <!-- <h1>{{ childTitle }}</h1>
 <button on-click="passToParent()">update</button>

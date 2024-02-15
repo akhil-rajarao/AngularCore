@@ -16,11 +16,23 @@ import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TestServiceService } from './test-service.service';
+import { Homechild1Component } from './homechild1/homechild1.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const customRoutes: Routes = [
   {
     path: '',
     component: HeaderComponent,
+  },
+  {
+    path: 'home',
+    component: HeaderComponent,
+    children: [
+      {
+        path: 'homechild1',
+        component: Homechild1Component,
+      },
+    ],
   },
   {
     path: 'about',
@@ -35,15 +47,15 @@ const customRoutes: Routes = [
     component: FooterComponent,
   },
 
-{
+  {
     path: 'about/:id',
     component: AboutComponent,
-  }
+  },
 
-  ,{
+  {
     path: '**',
     component: DecoratorsComponent,
-  }
+  },
 ];
 @NgModule({
   declarations: [
@@ -54,6 +66,7 @@ const customRoutes: Routes = [
     FooterComponent,
     AboutComponent,
     ContactUsComponent,
+    Homechild1Component,
   ],
   imports: [
     BrowserModule,
@@ -61,8 +74,9 @@ const customRoutes: Routes = [
     FormsModule,
     CommonModule,
     RouterModule.forRoot(customRoutes),
+    HttpClientModule,
   ],
-  providers: [provideClientHydration(),TestServiceService],
+  providers: [provideClientHydration(), TestServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

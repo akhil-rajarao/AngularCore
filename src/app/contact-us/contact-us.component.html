@@ -1,1 +1,4 @@
 <h1>this is contact us page</h1>
+<button on-click="moveToHome()">Navigate to Home</button>
+<div *ngIf="recievedData">{{recievedData[0].title}}</div>
+<button (click)="getRequest()">get request</button>
