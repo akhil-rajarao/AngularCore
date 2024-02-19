@@ -1,8 +1,12 @@
 <h1>this is About component</h1>
 <h1>{{ newMobiles }}</h1>
-<h1>{{uservalue}}</h1>
+<h1>{{ uservalue }}</h1>
 <!-- <h1>{{usernames.name}}</h1> -->
-<h1>{{queryName}}4566</h1>
+<h1>{{ queryName }}4566</h1>
 
+<ng-content></ng-content>
+<br />
 
-<a routerLink="/about" [queryParams]="{'name':'akhil','age':'29'}">Query Params</a>
+<a routerLink="/about" [queryParams]="{ name: 'akhil', age: '29' }"
+  >Query Params</a
+>

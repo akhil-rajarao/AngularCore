@@ -14,7 +14,7 @@ import { DecoratorsComponent } from './decorators/decorators.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { TestServiceService } from './test-service.service';
 import { Homechild1Component } from './homechild1/homechild1.component';
 import { HttpClientModule } from '@angular/common/http';

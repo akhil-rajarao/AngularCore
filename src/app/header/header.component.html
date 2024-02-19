@@ -3,6 +3,8 @@
 <button on-click="changeName()">change</button>
 <router-outlet></router-outlet>
 <button (click)="showChild()">show child component</button>
+<app-about> this is from parent component <br> used ng-content in child component</app-about>
+
 
 <!-- <h1>{{ childTitle }}</h1>
 <button on-click="passToParent()">update</button>
