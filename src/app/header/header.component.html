@@ -28,6 +28,9 @@
     <p class="text-danger" *ngIf="un.touched&&un.errors?.['required']">
       username is required
     </p>
+    <p class="text-danger" *ngIf="un.touched&&un.errors?.['minlength']">
+      min length error
+    </p>
     <input
       type="password"
       class="form-control"
