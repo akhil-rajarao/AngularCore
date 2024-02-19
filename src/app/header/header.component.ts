@@ -9,12 +9,10 @@ import { emit } from 'process';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  constructor(private r:Router, public ts: TestServiceService) {
-
-  }
- showChild = ()=>{
-      this.r.navigate(['home/homechild1'])
-    }
+  constructor(private r: Router, public ts: TestServiceService) {}
+  showChild = () => {
+    this.r.navigate(['home/homechild1']);
+  };
   mobiles = this.ts.mobileName;
   changeName = () => {
     this.ts.mobileName = 'Upgraded to Apple';
@@ -37,5 +35,8 @@ export class HeaderComponent {
 
   passToParent = () => {
     this.customEvent.emit(this.childMessageToParent);
+  };
+  onclicking = (el: any) => {
+    console.log(el.control.value);
   };
 }

@@ -1,10 +1,10 @@
-<h1>This is Header Component</h1>
+<!-- <h1>This is Header Component</h1>
 <h1>{{ ts.mobileName }}</h1>
 <button on-click="changeName()">change</button>
 <router-outlet></router-outlet>
 <button (click)="showChild()">show child component</button>
 <app-about> this is from parent component <br> used ng-content in child component</app-about>
-
+ -->
 
 <!-- <h1>{{ childTitle }}</h1>
 <button on-click="passToParent()">update</button>
@@ -12,3 +12,29 @@
 <input type="text" [(ngModel)]="area" (input)="changevillagename($event)" />
 <button on-click="buttonclick()">update</button>
 <h1>{{ place }}</h1> -->
+
+<form action="">
+  <div ngModelGroup #group="ngModelGroup">
+    UserName
+    <input
+      type="text"
+      required
+      minlength="4"
+      class="form-control"
+      ngModel
+      name="uname"
+      #un="ngModel"
+    />
+    <p class="text-danger" *ngIf="un.touched&&un.errors?.['required']">
+      username is required
+    </p>
+    <input
+      type="password"
+      class="form-control"
+      ngModel
+      name="pwd"
+      #passwrd="ngModel"
+    />
+  </div>
+</form>
+<button (click)="onclicking(group)">click</button>
