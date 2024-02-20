@@ -99,4 +99,9 @@
     </p>
   </div>
   <div><router-outlet></router-outlet></div>
+<form [formGroup]="totalForm">
+  <input type="text" formControlName="user">
+  <input type="password" formControlName="pwd">
+</form>
+<button (click)="show()">click</button>
 </div>

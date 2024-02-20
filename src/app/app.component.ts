@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -19,12 +20,21 @@ export class AppComponent {
   salary: number = 8646846;
   valuesinsode: string = 'value1';
   isloading: boolean = false;
-  cdata:any;
+  cdata: any;
   movies = ['marvel', 'ironman', 'doctor Strange'];
   name: any = '(input)=changeName($event)';
   person: object = { firstName: 'John', gender: 'm' };
   wish: string = 'buon mezzogiorno';
-  pulledData = ""
+  pulledData = '';
+  totalForm = new FormGroup({
+    user: new FormControl(),
+    pwd: new FormControl(),
+  });
+  show = () => {
+    console.log(this.totalForm);
+    console.log(this.totalForm.controls.user.value);
+    console.log(this.totalForm.controls.pwd.value);
+  };
   increment = () => {
     this.counter = this.counter + 1;
   };

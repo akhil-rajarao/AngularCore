@@ -7,7 +7,7 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, NgIf } from '@angular/common';
 import { CustomPipePipe } from './custom-pipe.pipe';
 import { DecoratorsComponent } from './decorators/decorators.component';
@@ -74,7 +74,7 @@ const customRoutes: Routes = [
     FormsModule,
     CommonModule,
     RouterModule.forRoot(customRoutes),
-    HttpClientModule,
+    HttpClientModule,ReactiveFormsModule
   ],
   providers: [provideClientHydration(), TestServiceService],
   bootstrap: [AppComponent],
