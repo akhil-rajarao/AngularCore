@@ -1,5 +1,12 @@
-<form [formGroup]="signup" >
+<form [formGroup]="signup">
   Username: <input type="text" class="m-3" formControlName="user" /> <br />
+  <!-- <ng-template *ngIf="errormsg"> enter an Upper case letter </ng-template> -->
+  <p
+    *ngIf="this.signup.get('user')?.touched&&this.signup.get('user')?.errors?.['noUpper']"
+  >
+    input an upper case letter
+  </p>
   email-id: <input type="email" class="m-3" formControlName="mail" /><br />
   password: <input type="password" formControlName="pwd" /> <br />
+  <button (click)="show()">click</button>
 </form>
