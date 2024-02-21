@@ -14,26 +14,27 @@
 <h1>{{ place }}</h1> -->
 
 <form action="" #form="ngForm">
-  <div ngModelGroup #group="ngModelGroup">
+  <div ngModelGroup #group="ngModelGroup" class="gap-5" >
     UserName
     <input
       type="text"
       required
       minlength="4"
-      class="form-control"
+      class=" "
       ngModel
       name="uname"
       #un="ngModel"
-    />
+    /> <br>
     <p class="text-danger" *ngIf="un.touched&&un.errors?.['required']">
       username is required
     </p>
     <p class="text-danger" *ngIf="un.touched&&un.errors?.['minlength']">
       min length error
-    </p>
+    </p> <br>
+    password
     <input
       type="password"
-      class="form-control"
+      class=" m-3"
       ngModel
       name="pwd"
       #passwrd="ngModel"

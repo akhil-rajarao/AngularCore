@@ -11,3 +11,6 @@
   background: black;
 }
 
+.ng-valid{
+  border: solid green 1px;
+}

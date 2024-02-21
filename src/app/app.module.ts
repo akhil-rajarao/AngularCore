@@ -18,6 +18,7 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { TestServiceService } from './test-service.service';
 import { Homechild1Component } from './homechild1/homechild1.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponentComponent } from './form-component/form-component.component';
 
 const customRoutes: Routes = [
   {
@@ -67,6 +68,7 @@ const customRoutes: Routes = [
     AboutComponent,
     ContactUsComponent,
     Homechild1Component,
+    FormComponentComponent,
   ],
   imports: [
     BrowserModule,
