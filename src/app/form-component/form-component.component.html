@@ -2,7 +2,7 @@
   Username: <input type="text" class="m-3" formControlName="user" /> <br />
   <!-- <ng-template *ngIf="errormsg"> enter an Upper case letter </ng-template> -->
   <p
-    *ngIf="this.signup.get('user')?.touched&&this.signup.get('user')?.errors?.['noUpper']"
+    *ngIf="this.signup.get('user')?.touched && this.signup.get('user')?.errors?.['noUpper'] "
   >
     input an upper case letter
   </p>
