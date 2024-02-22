@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { AnyncpipeComponent } from './anyncpipe/anyncpipe.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { NewModuleModule } from './new-module/new-module.module';
 
 const customRoutes: Routes = [
   {
@@ -80,7 +81,7 @@ const customRoutes: Routes = [
     FormsModule,
     CommonModule,
     RouterModule.forRoot(customRoutes),
-    HttpClientModule,ReactiveFormsModule
+    HttpClientModule,ReactiveFormsModule,NewModuleModule
   ],
   providers: [provideClientHydration(), TestServiceService],
   bootstrap: [AppComponent],
