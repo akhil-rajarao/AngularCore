@@ -20,6 +20,7 @@ import { Homechild1Component } from './homechild1/homechild1.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { AnyncpipeComponent } from './anyncpipe/anyncpipe.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 const customRoutes: Routes = [
   {
@@ -71,6 +72,7 @@ const customRoutes: Routes = [
     Homechild1Component,
     FormComponentComponent,
     AnyncpipeComponent,
+    SignupFormComponent,
   ],
   imports: [
     BrowserModule,

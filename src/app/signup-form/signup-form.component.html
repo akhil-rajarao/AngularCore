@@ -1,0 +1,16 @@
+<div class="mx-auto">
+  <form #totalForm="ngForm">
+    username
+    <input
+      name="username"
+      ngModel
+      class="form-control w-50 mx-auto"
+      type="text"
+      required
+      minlength="3"
+    />
+    <p *ngIf="totalForm.controls?.['username']?.['errors']?.['required']&&totalForm.controls?.['username']?.touched">Requred min 3 characters</p>
+    <p *ngIf="totalForm.controls?.['username']?.touched">Required</p>
+    <input type="password" class="form-control w-50 mx-auto mt-3" ngModel name="pwd" required/>
+  </form>
+</div>
