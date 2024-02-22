@@ -19,6 +19,7 @@ import { TestServiceService } from './test-service.service';
 import { Homechild1Component } from './homechild1/homechild1.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponentComponent } from './form-component/form-component.component';
+import { AnyncpipeComponent } from './anyncpipe/anyncpipe.component';
 
 const customRoutes: Routes = [
   {
@@ -69,6 +70,7 @@ const customRoutes: Routes = [
     ContactUsComponent,
     Homechild1Component,
     FormComponentComponent,
+    AnyncpipeComponent,
   ],
   imports: [
     BrowserModule,
