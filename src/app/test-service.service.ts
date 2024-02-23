@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root',
@@ -36,4 +38,8 @@ export class TestServiceService {
       version: 2.53,
     },
   ];
+  usersArray = new Subject()
+  sendusers = ()=>{
+    this.usersArray.next(this.userDetails)
+  }
 }
