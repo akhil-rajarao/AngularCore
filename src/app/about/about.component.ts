@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TestServiceService } from '../test-service.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit,OnDestroy {
   queryName:any;
   constructor(
     private route: ActivatedRoute,
@@ -23,7 +23,10 @@ export class AboutComponent implements OnInit {
     })
   }
 
-
+ngOnDestroy(): void {
+  console.log('about component exited');
+  
+}
   uservalue: any;
   usernames: any;
 

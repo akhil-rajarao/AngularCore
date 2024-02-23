@@ -5,7 +5,6 @@
     text-align: center;
     box-sizing: content-box;
     background-color: rgb(192, 188, 188);
-
   "
 >
   <!-- <p>Current Time {{ timer }}</p>
@@ -99,7 +98,7 @@
       footer
     </p>
   </div>
-  <!-- <div><router-outlet></router-outlet></div> -->
+  <div><router-outlet></router-outlet></div>
   <!-- <app-form-component></app-form-component> -->
   <!-- <form [formGroup]="totalForm" class="form-group">
     profile Name : <input type="text" required formControlName="user" class="m-3" />
@@ -112,5 +111,9 @@
   <button (click)="show()">click</button> -->
   <!-- <app-anyncpipe></app-anyncpipe> -->
   <!-- <app-signup-form></app-signup-form> -->
-  <app-component-inside-module></app-component-inside-module>
+  <app-component-inside-module [cdatat]="city">
+
+    <button (click)="changecity()">click</button>
+  </app-component-inside-module>
+  <input type="text" />
 </div>

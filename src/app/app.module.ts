@@ -1,3 +1,4 @@
+import { ComponentInsideModuleComponent } from './new-module/component-inside-module/component-inside-module.component';
 import { NgModule, Component } from '@angular/core';
 import {
   BrowserModule,
@@ -81,7 +82,9 @@ const customRoutes: Routes = [
     FormsModule,
     CommonModule,
     RouterModule.forRoot(customRoutes),
-    HttpClientModule,ReactiveFormsModule,NewModuleModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NewModuleModule,
   ],
   providers: [provideClientHydration(), TestServiceService],
   bootstrap: [AppComponent],

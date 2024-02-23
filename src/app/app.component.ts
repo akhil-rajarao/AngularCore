@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy{
   title: string = 'Demo-Application';
   titles: string = 'New application initilisation';
   timer: string = new Date().toLocaleTimeString();
@@ -30,6 +30,10 @@ export class AppComponent {
     user: new FormControl(),
     pwd: new FormControl(),
   });
+  ngOnDestroy(): void {
+    console.log('home componenet exited');
+    
+  }
   show = () => {
     console.log(this.totalForm);
     console.log(this.totalForm.controls.user.value);
@@ -57,4 +61,6 @@ export class AppComponent {
   changeVisibility = () => {
     this.visible = !this.visible;
   };
+
+
 }
